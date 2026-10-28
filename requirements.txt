@@ -1,7 +1,8 @@
+
 streamlit
 pandas
 numpy
-scikit-learn
-lightgbm
 joblib
-matplotlib
+scikit-learn==1.6.1
+lightgbm
+plotly
