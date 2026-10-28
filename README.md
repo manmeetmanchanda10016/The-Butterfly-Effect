@@ -1,72 +1,78 @@
-# 🦋 The Butterfly Effect
-### Sales Forecasting Using Machine Learning
+# 🦋 The Butterfly Effect — Retail Sales Forecasting
 
-The Butterfly Effect is a machine learning project that predicts retail sales using historical sales patterns, store information, product categories, promotional activities, and time-based features.
+**Predict retail sales using Machine Learning and LightGBM.**
 
-Built using **LightGBM and Streamlit**, this project provides an interactive dashboard for sales prediction and model performance analysis.
+🚀 **Live Demo:** [Try The Butterfly Effect](https://the-butterfly-effect-ngfrju5rjaizzniva9vze8.streamlit.app/)
 
-## ✨ Features
+📂 **GitHub Repository:** [The Butterfly Effect](https://github.com/manmeetmanchanda10016/The-Butterfly-Effect)
 
-- 📈 Retail sales prediction using LightGBM
-- 🏪 Store and product family selection
-- 🛍️ Promotional activity analysis
-- 📅 Date-based feature selection
-- 🔄 Historical sales features using lag values
-- 📊 Actual vs. predicted sales visualization
-- 🎯 Feature importance visualization
-- 📉 Model evaluation metrics
-- 🎨 Interactive dashboard with an Ice Blue and White theme
+---
 
-## 🧠 Machine Learning Model
+## 📌 Project Overview
 
-**Algorithm:** LightGBM Regressor
+The Butterfly Effect is an interactive retail sales forecasting application built using **Python, LightGBM, and Streamlit**. It predicts retail sales based on factors such as store number, product family, promotions, date information, and historical sales.
 
-**Input Features:**
-- `store_nbr`
-- `family`
-- `onpromotion`
-- `day_of_week`
-- `month`
-- `year`
-- `day_of_month`
-- `lag_1`
-- `lag_7`
+The application provides an intuitive dashboard where users can adjust input parameters, generate sales predictions, and explore model performance.
 
-The trained model is saved as a serialized pipeline and used by the Streamlit application to generate predictions.
+## ✨ Key Features
+
+- 📈 **Sales Forecasting:** Predict retail sales using a trained LightGBM model.
+- 🎛️ **Interactive Dashboard:** Customize store, product, promotion, date, and historical sales inputs.
+- 📊 **Model Evaluation:** View MAE, RMSE, and R² metrics.
+- 📉 **Sales Visualization:** Explore actual versus predicted sales when evaluation data is available.
+- 🔍 **Feature Importance:** Understand which input features contribute to model predictions.
+- 🎨 **User-Friendly Interface:** Clean, interactive dashboard built with Streamlit.
+
+## 🤖 Machine Learning Model
+
+The project uses **LightGBM**, a gradient boosting framework designed for efficient and accurate predictions.
+
+### Input Features
+
+- `store_nbr` — Store identifier
+- `family` — Product family
+- `onpromotion` — Number of items on promotion
+- `day_of_week` — Day of the week
+- `month` — Month of the year
+- `year` — Year
+- `day_of_month` — Day of the month
+- `lag_1` — Previous day's sales
+- `lag_7` — Sales from seven days earlier
 
 ## 📊 Model Performance
 
 | Metric | Score |
 |---|---:|
-| MAE | 82.28 |
-| RMSE | 374.28 |
+| MAE | 82.2774 |
+| RMSE | 374.2801 |
 | R² Score | 0.9245 |
 
-*Note: These are the recorded evaluation results. Actual performance depends on the dataset and evaluation methodology.*
+These are the previously recorded evaluation results for the trained model. Actual performance may vary depending on the evaluation dataset.
 
 ## 🛠️ Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- LightGBM
-- Plotly
-- Streamlit
-- Joblib
+- **Programming Language:** Python
+- **Machine Learning:** LightGBM, Scikit-learn
+- **Data Processing:** Pandas, NumPy
+- **Model Serialization:** Joblib
+- **Dashboard:** Streamlit
+- **Visualization:** Plotly
+- **Deployment:** Streamlit Community Cloud
+- **Version Control:** Git and GitHub
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 The-Butterfly-Effect/
+│
 ├── app.py
-├── requirements.txt
 ├── butterfly_effect_model.pkl
-├── evaluation_results.csv
-└── README.md
+├── requirements.txt
+├── README.md
+└── evaluation_results.csv   # Optional
 ```
 
-`evaluation_results.csv` is optional and can be used to display actual-versus-predicted sales when it contains the required columns.
+The optional `evaluation_results.csv` file can be used to visualize actual versus predicted sales when it contains the required columns: `Actual Sales` and `Predicted Sales`.
 
 ## 🚀 Run Locally
 
@@ -74,42 +80,44 @@ The-Butterfly-Effect/
 
 ```bash
 git clone https://github.com/manmeetmanchanda10016/The-Butterfly-Effect.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
 cd The-Butterfly-Effect
 ```
 
-### 2. Install dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the application
+### 4. Run the Streamlit application
 
 ```bash
 streamlit run app.py
 ```
 
-The dashboard will open in your browser.
-
-## 📈 How It Works
-
-1. Select a store and product family.
-2. Enter promotional and date-related information.
-3. Provide historical sales values for the previous day and seven days earlier.
-4. Click **Predict Sales**.
-5. Explore the predicted sales, evaluation metrics, and feature importance.
+The application will open in your browser.
 
 ## 🎯 Project Objective
 
-The objective is to explore how machine learning can support retail demand forecasting, sales analysis, and informed inventory planning.
+The goal of this project is to demonstrate how machine learning can be used for retail sales forecasting through an interactive dashboard. It combines model development, data processing, performance evaluation, and deployment into one application.
 
 ## 👨‍💻 Author
 
 **Manmeet Singh Manchanda**
 
+Computer Science and Engineering Student
+
 - GitHub: [@manmeetmanchanda10016](https://github.com/manmeetmanchanda10016)
-- Repository: [The Butterfly Effect](https://github.com/manmeetmanchanda10016/The-Butterfly-Effect)
+- Project Repository: [The Butterfly Effect](https://github.com/manmeetmanchanda10016/The-Butterfly-Effect)
+- Live Application: [Launch Dashboard](https://the-butterfly-effect-ngfrju5rjaizzniva9vze8.streamlit.app/)
 
 ---
 
-*Built with Python, Machine Learning, and Streamlit. 🦋*
+⭐ If you find this project interesting, feel free to explore the repository and try the live demo!
+
+**Thank you for visiting The Butterfly Effect! 🦋**
